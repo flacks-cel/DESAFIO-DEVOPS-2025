@@ -1,0 +1,41 @@
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Ambientes virtuais
+venv/
+env/
+.env
+
+# Arquivos de dependências
+node_modules/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Arquivos de build
+dist/
+build/
+*.egg-info/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Arquivos de configuração IDE
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Dados de volume Docker
+data/
+
+# Arquivos temporários
+.tmp/
+tmp/
