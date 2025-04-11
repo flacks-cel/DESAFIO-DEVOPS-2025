@@ -4,7 +4,7 @@ Este documento oferece instruções para instalar, configurar e operar a soluç�
 
 ## Requisitos do Sistema
 
-Para executar este projeto, você precisará ter instalado:
+Para executar este projeto, precisará ter instalado:
 
 - **Docker Desktop** (Windows/Mac) ou Docker Engine + Docker Compose (Linux)
 - **Git** (para clonar o repositório)
@@ -68,7 +68,7 @@ chmod +x test.sh
 
 ## Acessando as Aplicações e Serviços
 
-Uma vez que a infraestrutura esteja em execução, você pode acessar:
+Uma vez que a infraestrutura esteja em execução, acessar:
 
 ### Aplicações
 
@@ -95,13 +95,13 @@ O cache está configurado com diferentes tempos de expiração:
 
 Para verificar o funcionamento do cache:
 
-1. Acesse uma das rotas (ex: http://localhost/app1/hello)
-2. Observe o cabeçalho `X-Cache-Status` na resposta (usando as ferramentas de desenvolvedor do navegador ou curl)
-3. Atualize a página imediatamente - você verá `X-Cache-Status: HIT` indicando que a resposta veio do cache
-4. Aguarde o tempo de expiração (10s para App1 ou 60s para App2)
-5. Atualize novamente - você verá `X-Cache-Status: MISS` indicando que o cache expirou
+1. Acessar uma das rotas (ex: http://localhost/app1/hello)
+2. Observar o cabeçalho `X-Cache-Status` na resposta (usando as ferramentas de desenvolvedor do navegador ou curl)
+3. Atualizar a página imediatamente - você verá `X-Cache-Status: HIT` indicando que a resposta veio do cache
+4. Aguardar o tempo de expiração (10s para App1 ou 60s para App2)
+5. Atualizar novamente - você verá `X-Cache-Status: MISS` indicando que o cache expirou
 
-Você também pode usar o script de teste que verifica automaticamente este comportamento:
+Também pode usar o script de teste que verifica automaticamente este comportamento:
 ```bash
 ./test.sh
 ```
@@ -110,14 +110,14 @@ Você também pode usar o script de teste que verifica automaticamente este comp
 
 Para configurar e utilizar o Grafana:
 
-1. Acesse http://localhost:3001 (credenciais: admin/admin)
+1. Acessar http://localhost:3001 (credenciais: admin/admin)
 2. Configure o Prometheus como fonte de dados:
    - Vá em Configuration > Data Sources > Add data source
    - Selecione Prometheus
    - URL: http://prometheus:9090
    - Clique em "Save & Test"
 
-3. Crie um novo dashboard:
+3. Criar um novo dashboard:
    - Clique em "+" > Dashboard
    - Adicione um novo painel
    - Configure uma consulta usando métricas como `app_requests_total` ou `nodejs_http_requests_total`
